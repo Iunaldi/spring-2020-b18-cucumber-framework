@@ -40,6 +40,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
+        Driver.closeDriver();
 
     }
 
@@ -49,10 +50,6 @@ public class Hooks {
 
 
 
-    @After(value = "@db", order = 2 )
-    public void tearDownDatabaseConnection(){
-        System.out.println("--------> AFTER ANNOTATION: DB CONNECTION CLOSED <------");
-    }
 
 
 
@@ -67,10 +64,11 @@ public class Hooks {
         System.out.println("===========> BEFORESTEP: TAKING SCREENSHOT <===========");
     }
 
-    @AfterStep
-    public void tearDownStep(){
-        System.out.println("===========> AFTERSTEP: TAKING SCREENSHOT <===========");
-    }
+
+
+
+
+
 
 
 

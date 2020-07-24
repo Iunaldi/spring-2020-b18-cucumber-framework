@@ -53,7 +53,7 @@ public class Driver {
                         desiredCapabilities.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
                         desiredCapabilities.setPlatform(Platform.LINUX);
 //                        ChromeOptions chromeOptions = new ChromeOptions();
-                        URL url = new URL("http://3.235.145.39:4444/wd/hub");
+                        URL url = new URL("http://54.157.174.231:4444/wd/hub");
                         driver = new RemoteWebDriver(url, desiredCapabilities);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -82,6 +82,9 @@ public class Driver {
         if (driver != null) {
             driver.quit();
             driver = null;
+
+
+
         }
     }
 
